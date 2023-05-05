@@ -13,7 +13,7 @@ Grandes telas: acima de 1200px
 
     /* TABLET */
     body {
-        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+        background-image: linear-gradient(to top, #A7C7F8, #414E5A);
     }
 
     section#login {
@@ -36,7 +36,7 @@ Grandes telas: acima de 1200px
 
     /* DESKTOP */
     body {
-        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+        background-image: linear-gradient(to top, #A7C7F8, #414E5A);
     }
 
     section#login {
