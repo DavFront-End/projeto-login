@@ -14,11 +14,11 @@ Grandes telas: acima de 1200px
     /* TABLET */
     body {
         background-image: linear-gradient(to top, #A7C7F8, #414E5A);
-        background-repeat: no-repeat;
     }
 
     section#login {
         width: 80vw;
+        height: 300px;
     }
 
     #imagem {
@@ -42,6 +42,7 @@ Grandes telas: acima de 1200px
 
     section#login {
         width: 950px;
+        height: 350px;
     }
 
     #imagem {
