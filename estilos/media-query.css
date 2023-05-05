@@ -56,6 +56,10 @@ Grandes telas: acima de 1200px
         float: left;
     }
 
+    #formulario > h1 {
+        font-size: 2em;
+    }
+
     #formulario > p {
         font-size: 1em;
         margin-bottom: 20px;
