@@ -14,6 +14,7 @@ Grandes telas: acima de 1200px
     /* TABLET */
     body {
         background-image: linear-gradient(to top, #A7C7F8, #414E5A);
+        background-repeat: no-repeat;
     }
 
     section#login {
