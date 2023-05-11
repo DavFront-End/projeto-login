@@ -17,18 +17,19 @@ Grandes telas: acima de 1200px
     }
 
     section#login {
+        display: flex;
         width: 80vw;
         height: 300px;
     }
 
     #imagem {
-        float: left;
+        order: 1;
         width: 30%;
         height: 100%;
     }
 
     #formulario {
-        float: right;
+        order: 2;
         width: 70%;
     }
 }
@@ -40,20 +41,22 @@ Grandes telas: acima de 1200px
         background-image: linear-gradient(to top, #A7C7F8, #414E5A);
     }
 
-    section#login {
+     section#login {
+        display: flex;
+        flex-direction: row;
         width: 950px;
         height: 350px;
     }
 
-    #imagem {
-        float: right;
+     #imagem {
+        order: 2;
         width: 50%;
         height: 100%;
     }
 
     #formulario {
+        order: 1;    
         width: 50%;
-        float: left;
     }
 
     #formulario > h1 {
