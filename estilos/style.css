@@ -1,141 +1,189 @@
 @charset "UTF-8";
 
-/*
-    Paleta de cores
-    #A7C7F8
-    #414E5A
-*/
-
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body,html {
-    background-color: #414E5A;
+body {
+    background-color: #414e5a;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-section#login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    background-color: white;
-    height: 515px;
+    background-color: #fff;
     width: 250px;
+    height: 515px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-    transition: width .3s, height .3s;
-    transition-timing-function: ease;
-    
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.190);
+    overflow: hidden;
+    transition: ease width .3s, heigth .3s;
 }
 
-#imagem {
-    display: block;
-    background: #5f2c82 url(../imagens/pexels-maksym-harbar-14809369.jpg);
-    height: 200px;
-    background-size: cover;
-    background-position: bottom center;
+section h1 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-#formulario {
-    display: block;
+section p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+section {
     padding: 10px;
 }
 
-#formulario > h1 {
-    text-align: center;
-    margin-bottom: 10px;
+#imagem {
+    background-image: url(../imagens/pexels-maksym-harbar-14809369.jpg);
+    height: 200px;
+    background-position: bottom center;
+    background-size: cover;
 }
 
-
-#formulario > p {
-    font-size: 0.8em;
-    margin-bottom: 10px;
-}
-
-form > div.campo {    
-    background-color:  #414E5A;
-    display: block;
-    width: 100%;
+.input-Box {
+    background-color: #414e5a;
     height: 40px;
-    border-radius: 8px;
+    width: 100%;
     margin: 5px 0px;
+    border-radius: 8px;
     border: 2px solid #414e5a;
 }
 
-div.campo > label {
+.input-Box input {
+    background-color:  #a7c7f8;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 4px;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    transform: translateY(-13px);  
+}
+
+.input-Box input:focus {
+    background-color: #fff;
+}
+
+.input-Box label {
     display: none;
 }
 
-div.campo > span{
-    color: white;
-    font-size: 2em;
-    width: 40px;
+.input-Box span {
+    color: #fff;
+    font-size: 2rem;
     padding: 5px;
+    width: 40px;
 }
 
- div.campo > input {
-    background-color: #b8d3ff;
-    font-size: 1em;
-    width: calc(100% - 45px);
-    transform: translateY(-12px);
-    height: 100%;
-    border: 0px;
-    border-radius: 8px;
-    padding: 4px;
-}
-
-div.campo > input:focus-within {
-    background-color: white;
-} 
-
-form > input[type=submit] {
-    display: block;
-    font-size: 1em;
+input[type="submit"] {
     width: 100%;
     height: 40px;
-    background-color: #82b1fb;
-    color: white;
+    margin-bottom: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #88b6fb;
     cursor: pointer;
 }
 
-form > input[type=submit]:hover {
-    background-color: #597fb8;
+input[type="submit"]:hover {
+    background-color: #A7C7F8;
 }
 
-form > a.botao {
+.botao {
     display: block;
-    text-align: center;
     text-decoration: none;
-    font-size: 1em;
-    width: 100%;
+    text-align: center;
     height: 40px;
-    padding-top: 6px;
-    margin-top: 5px;
-    color: #82b1fb;
-    border: 2px solid #82b1fb;
-    background-color: white;
-    border-radius: 5px;
+    padding: 8px;
+    color: #88b6fb;
+    border: 2px solid #A7C7F8;
+    border-radius: 8px;
 }
 
-form > a.botao:hover {
-    background-color: #cee1ff;
+.botao:hover {
+    background-color: #cde1fd;
 }
 
-form > a.botao > span {
+.botao span {
     font-size: 0.8em;
 }
+
+/* Media Query */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+                    /* Tablet */
+
+    body {
+        background-image: linear-gradient(to top, #A7C7F8, #414E5A);
+    }
+    
+    main {
+        width: 80vw;
+        height: 300px;
+        display: flex;
+    }
+
+    .input-Box input {
+        width: calc(100% - 45px);
+        transform: translateY(-12px); 
+    }
+
+    #imagem {
+        width: 30%;
+        height: 100%;
+    }
+
+    section {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+                /* Desktop */
+               
+    body {
+        background-image: linear-gradient(to top, #A7C7F8, #414E5A);
+    }
+    
+    main {
+        width: 950px;
+        height: 350px;
+        display: flex;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .input-Box input {
+        width: calc(100% - 45px);
+        transform: translateY(-12px); 
+    }
+
+    #imagem {
+        order: 2;
+        width: 50%;
+        height: 100%;
+    }
+
+    section {
+        order: 1;
+        width: 50%;
+        height: 50%;
+    }
+}
+
